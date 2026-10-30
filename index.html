@@ -2,50 +2,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixel Gallery</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Gallery | Explore Moments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <a href="#" class="logo">PIXEL<span>.</span></a>
-    <p>Discover the world through photographs</p>
-  </header>
 
-  <main class="container">
-    <section class="intro">
-      <span class="eyebrow">VISUAL COLLECTION</span>
-      <h1>Moments in <span>Focus.</span></h1>
-      <p>A collection of beautiful places and little moments.</p>
-    </section>
+    <header class="header">
+        <a href="#" class="logo">PIXEL<span>.</span></a>
 
-    <nav class="filters" aria-label="Image categories">
-      <button class="filter active" data-category="all">All Photos</button>
-      <button class="filter" data-category="nature">Nature</button>
-      <button class="filter" data-category="city">Architecture</button>
-      <button class="filter" data-category="wildlife">Wildlife</button>
-    </nav>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </nav>
 
-    <section id="gallery" class="gallery" aria-label="Photo gallery"></section>
-    <p id="empty" class="empty" hidden>No photos in this category.</p>
-  </main>
+        <a href="#gallery" class="header-btn">Explore Photos ↗</a>
+    </header>
 
-  <div id="lightbox" class="lightbox" role="dialog"
-       aria-modal="true" aria-label="Image viewer" hidden>
-    <button id="close" class="close" aria-label="Close image viewer">&times;</button>
-    <button id="prev" class="nav prev" aria-label="Previous image">&#10094;</button>
-    <figure class="viewer">
-      <img id="fullImage" src="" alt="">
-      <figcaption>
-        <h2 id="imageTitle"></h2>
-        <p id="imageCount"></p>
-      </figcaption>
-    </figure>
-    <button id="next" class="nav next" aria-label="Next image">&#10095;</button>
-  </div>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">✦ YOUR DAILY DOSE OF INSPIRATION</span>
 
-  <footer>Made with creativity &amp; JavaScript © 2026</footer>
-  <script src="script.js"></script>
+                <h1>Every picture<br>
+                    tells a <span>story.</span>
+                </h1>
+
+                <p>
+                    Discover beautiful places, incredible wildlife,
+                    and unforgettable moments through our visual collection.
+                </p>
+
+                <a href="#gallery" class="primary-btn">
+                    Explore Gallery <span>→</span>
+                </a>
+
+                <div class="hero-details">
+                    <div>
+                        <strong>09+</strong>
+                        <small>Beautiful photos</small>
+                    </div>
+                    <div>
+                        <strong>03</strong>
+                        <small>Categories</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85"
+                    alt="Beautiful mountain lake landscape">
+
+                <div class="image-badge">
+                    <span class="badge-icon">✦</span>
+                    <div>
+                        <strong>Nature's beauty</strong>
+                        <small>Captured moments</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">THE COLLECTION</span>
+                    <h2>Explore our <span>gallery.</span></h2>
+                    <p>A little inspiration for your everyday life.</p>
+                </div>
+
+                <div class="gallery-label">✦ CURATED VISUALS</div>
+            </div>
+
+            <nav class="filters" aria-label="Image categories">
+                <button class="filter active" data-category="all">
+                    All Photos
+                </button>
+                <button class="filter" data-category="nature">
+                    Nature
+                </button>
+                <button class="filter" data-category="city">
+                    Architecture
+                </button>
+                <button class="filter" data-category="wildlife">
+                    Wildlife
+                </button>
+            </nav>
+
+            <section
+                id="gallery-grid"
+                class="gallery"
+                aria-label="Photo gallery">
+            </section>
+
+            <p id="empty" class="empty" hidden>
+                No photos in this category.
+            </p>
+        </section>
+
+        <section class="about-section" id="about">
+            <span class="eyebrow">ABOUT PIXEL</span>
+            <h2>Find beauty in the little things.</h2>
+            <p>
+                Pixel is a collection of photographs celebrating nature,
+                architecture, wildlife, and the beauty of our world.
+            </p>
+        </section>
+    </main>
+
+    <div
+        id="lightbox"
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image viewer"
+        hidden>
+
+        <button id="close" class="close" aria-label="Close viewer">
+            &times;
+        </button>
+
+        <button id="prev" class="nav prev" aria-label="Previous image">
+            &#10094;
+        </button>
+
+        <figure class="viewer">
+            <img id="fullImage" src="" alt="">
+            <figcaption>
+                <h2 id="imageTitle"></h2>
+                <p id="imageCount"></p>
+            </figcaption>
+        </figure>
+
+        <button id="next" class="nav next" aria-label="Next image">
+            &#10095;
+        </button>
+    </div>
+
+    <footer>
+        <a href="#" class="logo">PIXEL<span>.</span></a>
+        <p>Made with creativity &amp; passion © 2026</p>
+        <a href="#home">Back to top ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
